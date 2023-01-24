@@ -142,3 +142,44 @@
   .unclickable {
     pointer-events: none;
   }
+
+
+  @media (hover: hover) {
+    .tile:hover {
+      opacity: 85%;
+    }
+  }
+  
+  @media only screen and (max-width: 495px) {
+    body {
+      padding: 18px;
+    }
+  
+    h1 {
+      font-size: 40px;
+      margin-top: 70px;
+    }
+  
+    .container {
+      width: 23em;
+      height: 23em;
+      margin: 60px auto;
+    }
+  
+    p {
+      font-size: 15px;
+      text-align: left;
+    }
+  
+    button {
+      width: 100p;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .container {
+      width: 20em;
+      height: 20em;
+    }
+  }
+  
