@@ -55,3 +55,8 @@
     background: none;
     cursor: pointer;
   }
+  
+  button:hover {
+    background-color: #ffffff17;
+  }
+  
