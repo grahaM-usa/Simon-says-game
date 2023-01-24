@@ -24,3 +24,18 @@ function startGame() {
   document.body.style.background = "linear-gradient(to top, #87b7ff, #6f7cf5)";
   levelUp();
 }
+
+function levelUp() {
+    level = level + 1;
+    userSequence = [];
+    board.classList.add("unclickable");
+    info.innerText = "Watch the sequence!";
+    levelText.innerText = level;
+  
+    sequence.push(getRandomColor());
+    playSequence(sequence);
+  
+    setTimeout(() => {
+      userTurn();
+    }, level * 700 + 200);
+  }
