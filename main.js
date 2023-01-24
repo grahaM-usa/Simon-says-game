@@ -39,3 +39,34 @@ function levelUp() {
       userTurn();
     }, level * 700 + 200);
   }
+
+  function getRandomColor() {
+    const randomColor = tiles[Math.floor(Math.random() * tiles.length)];
+    return randomColor;
+  }
+  
+  function playSequence(sequence) {
+    sequence.forEach((color, index) => {
+      setTimeout(() => {
+        activateTile(color);
+      }, index * 700);
+    });
+  }
+
+  function activateTile(color) {
+    const tile = document.querySelector(`[data-tile='${color}']`);
+    const sound = document.querySelector(`[data-sound='${color}']`);
+  
+    tile.classList.remove("inactive");
+    sound.play();
+  
+    setTimeout(() => {
+      tile.classList.add("inactive");
+    }, 300);
+  }
+  
+  function userTurn() {
+    board.classList.remove("unclickable");
+    info.innerText = "Your turn!";
+  }
+  
