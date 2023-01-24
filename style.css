@@ -70,3 +70,34 @@
       opacity: 1;
     }
   }
+
+
+  .container {
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotation 5s;
+  }
+  
+  .board {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  
+  .tile {
+    width: 50%;
+    height: 50%;
+  }
+  
+  .tile:hover {
+    opacity: 85%;
+  }
