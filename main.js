@@ -112,3 +112,24 @@ function levelUp() {
     info.innerText = "Game over! 😈 Play again?";
     highScoreText.innerText = highScore;
   } 
+
+  function winGame() {
+    const sound = document.querySelector(`[data-sound='game-win']`);
+    sound.play();
+  
+    if (highScore < level) {
+      highScore = level;
+    }
+  
+    sequence = [];
+    userSequence = [];
+    level = 0;
+  
+    startButton.classList.remove("hidden");
+    board.classList.add("unclickable");
+  
+    document.body.style.background = "linear-gradient(to top, #BEF1CB, #60BC77)";
+    info.innerText = "Amazing work! 🤩 You win!";
+    highScoreText.innerText = highScore;
+  }
+  
