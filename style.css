@@ -12,7 +12,7 @@
     padding: 0;
     overflow: hidden;
   }
-
+  
   h1 {
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -27,7 +27,7 @@
     margin-top: -30px;
     margin-bottom: -5px;
   }
-
+  
   .score {
     display: flex;
     gap: 40px;
@@ -70,8 +70,7 @@
       opacity: 1;
     }
   }
-
-
+  
   .container {
     width: 500px;
     height: 500px;
@@ -101,7 +100,7 @@
   .tile:hover {
     opacity: 85%;
   }
-
+  
   .green {
     background-color: #00a300;
   }
@@ -142,8 +141,7 @@
   .unclickable {
     pointer-events: none;
   }
-
-
+  
   @media (hover: hover) {
     .tile:hover {
       opacity: 85%;
@@ -182,4 +180,3 @@
       height: 20em;
     }
   }
-  
