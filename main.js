@@ -93,3 +93,22 @@ function levelUp() {
     }
   }
   
+  function reset() {
+    const sound = document.querySelector(`[data-sound='game-over']`);
+    sound.play();
+  
+    if (highScore < level) {
+      highScore = level;
+    }
+  
+    sequence = [];
+    userSequence = [];
+    level = 0;
+  
+    startButton.classList.remove("hidden");
+    board.classList.add("unclickable");
+  
+    document.body.style.background = "linear-gradient(to top, #EA8F8F, #C12727)";
+    info.innerText = "Game over! 😈 Play again?";
+    highScoreText.innerText = highScore;
+  } 
