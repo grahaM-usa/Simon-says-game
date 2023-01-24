@@ -70,3 +70,26 @@ function levelUp() {
     info.innerText = "Your turn!";
   }
   
+  function handleClick(tile) {
+    userSequence.push(tile);
+    const sound = document.querySelector(`[data-sound='${tile}']`);
+    sound.play();
+  
+    for (let i = 0; i < userSequence.length; i++) {
+      if (userSequence[i] !== sequence[i]) {
+        reset();
+        return;
+      }
+    }
+  
+    if (userSequence.length === sequence.length) {
+      if (level === 12) {
+        winGame();
+      } else {
+        info.innerText = "You're doing great! Keep it up!";
+        setTimeout(levelUp, 1300);
+        return;
+      }
+    }
+  }
+  
