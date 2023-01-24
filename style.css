@@ -60,3 +60,13 @@
     background-color: #ffffff17;
   }
   
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
