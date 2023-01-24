@@ -101,3 +101,44 @@
   .tile:hover {
     opacity: 85%;
   }
+
+  .green {
+    background-color: #00a300;
+  }
+  
+  .red {
+    background-color: #ce0707;
+  }
+  
+  .yellow {
+    background-color: #ebeb00;
+  }
+  
+  .blue {
+    background-color: #0000d6;
+  }
+  
+  .footer {
+    font-size: 0.8rem;
+    margin-top: 100px;
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+  }
+  
+  a:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  .inactive {
+    opacity: 35%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .unclickable {
+    pointer-events: none;
+  }
