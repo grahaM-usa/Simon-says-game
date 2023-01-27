@@ -1,3 +1,7 @@
+Deployed - https://pages.git.generalassemb.ly/sharnellgraham/Unit1-Project-Simon-Says-/
+
+
+
 # Unit1-Project
 SImon says Game
 
