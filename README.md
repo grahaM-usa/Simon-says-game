@@ -20,20 +20,20 @@ SImon says Game
  
  I want to click a button to start the game.
 
-
+```
   startButton.addEventListener("click", startGame);
   startButton.classList.add("hidden");
   info.innerText = "Watch the sequence carefully!";
   level = 0;
-  
+  ```
 
   I want every level up to add one tile to the computer sequence.
 
-
+```
   sequence.push(getRandomColor());
   playSequence(sequence);
 
-
+```
   I want a randomly generated computer sequence to play.
 
 
@@ -43,7 +43,7 @@ SImon says Game
 
  I want the computer's sequence to illuminate tiles and play a corresponding sound at a timed interval.
 
-
+```
   function playSequence(sequence) {
     sequence.forEach((color, index) => {
       setTimeout(() => {
@@ -63,19 +63,20 @@ SImon says Game
       tile.classList.add("inactive");
     }, 300);
   }
-
+```
 
  I want to click the tiles, only when it is my turn.
 
+```
 
   function userTurn() {
     board.classList.remove("unclickable");
     info.innerText = "Your turn!";
   }
-`
+```
 
  I want my clicks' values be stored.
-
+```
 
   board.addEventListener("click", (event) => {
   const { tile } = event.target.dataset;
@@ -84,21 +85,21 @@ SImon says Game
 
   userSequence.push(tile);
 
-
+```
  If my sequence is wrong at any point, then I want the game to end.
 
-
+```
   for (let i = 0; i < userSequence.length; i++) {
     if (userSequence[i] !== sequence[i]) {
       reset();
       return;
     }
   }
-
+```
 
  If I enter the correct sequence, then I want to level up. If I have beaten a specific number of rounds, then I want to win the game.
 
-
+```
   if (userSequence.length === sequence.length) {
     if (level === 5) {
       winGame();
@@ -108,40 +109,46 @@ SImon says Game
       return;
     }
   }
-
+```
 
  I want to see the screen change upon a win and a loss. I want my high score to be recorded. I also want to be able to replay.
 
 
 //loss
+```
     const sound = document.querySelector(`[data-sound='game-over']`);
     sound.play();
     
     document.body.style.background = "linear-gradient(to top, #EA8F8F, #C12727)";
     info.innerText = "Game over! 😈 Play again?";
-    
+    ```
 //win
-    const sound = document.querySelector(`[data-sound='game-win']`);
+   ```
+   const sound = document.querySelector(`[data-sound='game-win']`);
     sound.play();
     
     document.body.style.background = "linear-gradient(to top, #BEF1CB, #60BC77)";
     info.innerText = "Amazing work! 🤩 You win!";
-    
+   
+   ```
 //reset
+```
     sequence = [];
     userSequence = [];
     level = 0;
-        
+        ```
 //start button appears, board unclickable
+```
     startButton.classList.remove("hidden");
     board.classList.add("unclickable");
-`
+```
 
  I want my high score to be updated and recorded.
 
-
+```
     if (highScore < level) {
       highScore = level;
     }
     
     highScoreText.innerText = highScore;
+```
