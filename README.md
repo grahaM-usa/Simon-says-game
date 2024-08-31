@@ -1,4 +1,4 @@
-Deployed - https://sharnellgraham.github.io/Simon-says-game/
+Deployed - https://graham-usa.github.io/Simon-says-game/
 
 
 # Unit1-Project
